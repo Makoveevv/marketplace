@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Product</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <link href="assets/css/product.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+
+          <div class="header__top">
+            <div class="header__left">
+              <button class="header__categories-btn" data-menu-btn="categories-menu">
+                <svg class="burger" viewBox="0 0 100 100" width="45">
+                  <path
+                        class="burger__line burger__line--top"
+                        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                  <path
+                        class="burger__line burger__line--middle"
+                        d="m 30,50 h 40" />
+                  <path
+                        class="burger__line burger__line--bottom"
+                        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                </svg>
+              </button>
+              <a class="header__logo" href="index.html">
+                <picture>
+                  <source srcset="assets/img/logo.svg" media="(min-width: 768px)">
+                  <img src="assets/img/mobile-logo.svg" alt="Marketplace">
+                </picture>
+              </a>
+              <div class="header__search">
+                <input class="header__search-input" type="search" placeholder="Введите для поиска">
+                <img class="header__search-icon" src="assets/img/search.svg" alt="">
+              </div>
+            </div>
+            <div class="header__btn-box-mobile">
+              <!-- <button class="header__btn-box-mobile__item header__btn-mobile-compare" data-menu-btn="search-menu">
+                <img src="assets/img/compare-mobile-icon.svg" alt="">
+              </button> -->
+              <!-- <button class="header__btn-box-mobile__item header__btn-mobile-favorites" data-menu-btn="search-menu">
+                <img src="assets/img/heart.svg" alt="">
+                <span>251</span>
+              </button> -->
+              <button class="header__btn-box-mobile__item header__btn-mobile-search" data-menu-btn="search-menu">
+                <img src="assets/img/search.svg" alt="">
+                <span>87</span>
+              </button>
+              <button class="header__btn-box-mobile__item header__btn-mobile-user" data-menu-btn="user-menu">
+                <img src="assets/img/user-icon-grey.svg" alt="">
+                <span>45</span>
+              </button>
+              <button class="header__btn-box-mobile__item header__btn-box-mobile__item--num header__btn-mobile-cart">
+                <img class="header__cart-icon" src="assets/img/cart-icon-grey.svg" alt="">
+                <img class="header__cart-close" src="assets/img/close-icon-grey.svg" alt="">
+                <span>3</span>
+              </button>
+            </div>
+            <div class="header__btn-box">
+              <a class="header__btn-box__item header__btn-search" href="profile.html">
+                <img src="assets/img/user-icon-black.svg" alt="">
+                <span class="header__btn-box__text">Мой аккаунт</span>
+              </a>
+              <a class="header__btn-box__item header__btn-user" href="#">
+                <img src="assets/img/compare.svg" alt="">
+                <span class="header__btn-box__text">Сравнение</span>
+              </a>
+              <button class="header__btn-box__item header__btn-cart">
+                <img src="assets/img/cart-icon-black.svg" alt="">
+                <span class="header__btn-box__text">Корзина</span>
+              </button>
+            </div>
+          </div><!-- /.header__top -->
+          <div class="header__categories">
+            <ul class="header__categories-list">
+              <li class="header__categories-item">
+                <a href="catalog.html">Автоэлектроника</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Бытовая техника</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Садовая техника</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Товары для кухни</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Электроника</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Сад и огород</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Строительные материалы</a>
+              </li>
+              <li class="header__categories-item">
+                <a href="catalog.html">Одежда</a>
+              </li>
+            </ul>
+          </div><!-- /.menu header__categories -->
+          <div class="menu header__categories-mobile" id="categories-menu">
+            <h4 class="menu__title header__categories-mobile__title">Каталог</h4>
+            <ul class="menu__list header__categories-mobile__list">
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Автоэлектроника</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Бытовая техника</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Садовая техника</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Строительные материалы</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Фото и видео</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Красота и здоровье</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Фитнес и спорт</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Отдых на природе</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Товары для животных</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Одежда</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Обувь</a>
+              </li>
+              <li class="menu__item header__categories-mobile__item">
+                <a class="menu__link" href="catalog.html">Электроинструмент</a>
+              </li>
+            </ul>
+          </div><!-- /.menu header__categories-mobile -->
+          <div class="menu header__user-menu" id="user-menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="profile.html">Мой аккаунт</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Мои заказы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Мои адреса</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Выйти из аккаунта</a>
+              </li>
+            </ul>
+          </div><!-- /.menu header__user-menu -->
+          <div class="menu header__search-mobile" id="search-menu">
+            <input class="header__search-mobile__input" type="search" placeholder="Введите поисковый запрос">
+            <span class="header__search-mobile__icon"></span>
+          </div><!-- /.menu header__search-mobile -->
+
+        </div><!-- /.header__inner -->
+      </div><!-- /.container -->
+    </header>
+
+    <div class="page__info">
+      <div class="container">
+        <a class="page__back-link" href="catalog.html">
+          &lt; Автоэлектроника
+        </a>
+      </div><!-- /.container -->
+    </div><!-- /.catalog__info -->
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__list-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="breadcrumbs__list-item">
+            <a href="#">Page One</a>
+          </li>
+          <li class="breadcrumbs__list-item">
+            <a href="#">Page Two</a>
+          </li>
+          <li class="breadcrumbs__list-item">
+            <span>Page Three</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-page">
+      <div class="container">
+        <div class="product-page__inner">
+          <div class="product-page__images-box">
+            <div class="product-page__images-slider">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+            </div>
+            <div class="product-page__images-slider-nav">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+              <img class="product-page__slider-nav-img img-responsive" src="assets/img/content/product-big.jpg" alt="">
+            </div>
+          </div>
+          <div class="product-page__info">
+            <h2 class="product-page__title">Услитель звука 4 канала Alpine BBX-F1200</h2>  
+            <div class="product-page__line">
+              <form class="rating product-card__rating">
+                <input type="radio" name="rating" value="1" checked>
+                <input type="radio" name="rating" value="2" checked>
+                <input type="radio" name="rating" value="3" checked>
+                <input type="radio" name="rating" value="4">
+                <input type="radio" name="rating" value="5">
+                <span class="product-card__rating-text">15 отзывов</span>
+              </form>
+              <ul class="product-page__social-list">
+                <li class="product-page__social-item">
+                  <a class="product-page__social-link" href="#">
+                    <img src="assets/img/facebook.svg" alt="">
+                  </a>
+                </li>
+                <li class="product-page__social-item">
+                  <a class="product-page__social-link" href="#">
+                    <img src="assets/img/twitter.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div><!-- /.product-page__line -->
+            <p class="product-page__text">
+              Moment in the life of any aspiring astronomer of that it is time to buy that first telescope. It’s exciting to think about setting.
+            </p>
+            <div class="product-page__parameters">
+              <form>
+                <div class="product-page__parameters-color">
+                  <div class="product-page__parameters-title">Цвет</div>
+                  <div class="product-page__parameters-box">
+                    <label class="product-page__parameters-label">
+                      <input type="radio" name="color" data-color-parameter="#FF8364">
+                      <span class="product-page__parameters-bg"></span>
+                    </label>
+                    <label class="product-page__parameters-label">
+                      <input type="radio" name="color" data-color-parameter="#fff">
+                      <span class="product-page__parameters-bg"></span>
+                    </label>
+                    <label class="product-page__parameters-label">
+                      <input type="radio" name="color" data-color-parameter="#000">
+                      <span class="product-page__parameters-bg"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="product-page__parameters-size-select">
+                  <div class="product-page__parameters-title">Размер</div>
+                  <div class="product-page__parameters-select">
+                    <select>
+                      <option value="xs">XS</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">2XL</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div class="product-page__parameters-size-buttons">
+                  <div class="product-page__parameters-size-top">
+                    <div class="product-page__parameters-title">Размер</div>
+                    <a class="product-page__parameters-link" href="#">Как выбрать размер?</a>
+                  </div>
+                  <div class="size-wrapper">
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>XS</span>
+                    </label>
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>S</span>
+                    </label>
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>M</span>
+                    </label>
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>L</span>
+                    </label>
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>XL</span>
+                    </label>
+                    <label class="size-label">
+                      <input class="size-input" name="size" type="radio">
+                      <span>2XL</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="product-page__choose-box">
+                  <div class="product-page__parameters-checkbox">
+                    <p class="product-page__parameters-title">
+                      Checkbox
+                    </p>
+                    <label class="checkbox-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      On
+                    </label>
+                    <label class="checkbox-label">
+                      <input class="checkbox" type="checkbox">
+                      Off
+                    </label>
+                  </div>
+                  <div class="product-page__parameters-radio">
+                    <p class="product-page__parameters-title">
+                      Radiobuttons
+                    </p>
+                    <label class="radio-label">
+                      <input class="radio" name="radio" type="radio" checked>
+                      Radio Button
+                    </label>
+                    <label class="radio-label">
+                      <input class="radio" name="radio" type="radio">
+                      Radio Button
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div><!-- /.product-page__parameters -->
+            <div class="product-page__buy-box">
+              <div class="product-page__price">
+                300 000 руб.
+              </div>
+              <div class="product-page__btn-group">
+                <button class="product-page__btn-favorite">
+                  <img src="assets/img/favorite.svg" alt="">
+                </button>
+                <button class="product-page__btn-compare">
+                  <img src="assets/img/compare-mobile-icon.svg" alt="">
+                </button>
+              </div>
+              <button class="product-page__btn-cart">
+                В корзину
+                <img src="assets/img/cart-icon-white.svg" alt="">
+              </button>
+              <button class="product-page__buy-link">Информация о доставке и оплате</button>
+            </div><!-- /.product-page__buy-box -->
+            <div class="products-tabs">
+              <div class="tabs">
+                <a class="tabs__item active" href="#desc">Описание</a>
+                <a class="tabs__item" href="#reviews">Отзывы</a>
+                <a class="tabs__item" href="#custom">Custom</a>
+              </div>
+              <div class="tabs__container">
+                <div class="tabs__content-item active" id="desc">
+                  <p class="product-page__description">
+                    How beloved Superman has become in our culture and the worldwide fascination with extraterrestrials and all things cosmic only emphasizes that there is a deep curiosity in all humans about nature and astronomy.
+                  </p>
+                  <div class="product-page__table">
+                    <div class="product-page__table-row">
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter-name">Атрибут 1</div>
+                      </div>
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter">TFT A-MVA</div>
+                      </div>
+                    </div>
+                    <div class="product-page__table-row">
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter-name">Атрибут 2</div>
+                      </div>
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter">WLED</div>
+                      </div>
+                    </div>
+                    <div class="product-page__table-row">
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter-name">Атрибут 3</div>
+                      </div>
+                      <div class="product-page__table-column">
+                        <div class="product-page__table-parameter">1920x1080</div>
+                      </div>
+                    </div>
+                  </div><!-- /.product-page__table -->
+                </div><!-- /.tabs__content-item-->
+                <div class="tabs__content-item" id="reviews">
+                  <form class="review-form">
+                    <div class="review-form__inner">
+                      <h3 class="review-form__title">Заполните поля формы</h3>
+                    <input class="review-form__input" type="text" placeholder="Общее впечатление">
+                    <textarea class="review-form__textarea" placeholder="Ваш отзыв"></textarea>
+                    <h3 class="review-form__rating-title">Ваша оценка</h3>
+                    <div class="review-form__rating">
+                      <div class="rating">
+                        <input type="radio" name="rating" value="1" checked>
+                        <input type="radio" name="rating" value="2">
+                        <input type="radio" name="rating" value="3">
+                        <input type="radio" name="rating" value="4">
+                        <input type="radio" name="rating" value="5">
+                      </div>
+                    </div>
+                    </div>
+                    <button class="review__btn" type="submit">
+                      Оставить отзыв
+                      <img src="assets/img/quote.svg" alt="">
+                    </button>
+                  </form>
+                  <div class="review-list">
+                    <div class="review">
+                      <div class="review__header">
+                        <div class="review__short">Отличная сделка</div>
+                        <div class="review__user">Остап Бендер</div>
+                      </div>
+                      <div class="review__body">
+                        <p class="review__text">
+                          Отличный усилитель, мне нравится. Доставка тоже не подвела, курьер привез быстро, был вежлив.
+                        </p>
+                        <div class="review__rating">
+                          <form class="rating">
+                            <input type="radio" name="rating" value="1" checked>
+                            <input type="radio" name="rating" value="2" checked>
+                            <input type="radio" name="rating" value="3" checked>
+                            <input type="radio" name="rating" value="4">
+                            <input type="radio" name="rating" value="5">
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review">
+                      <div class="review__header">
+                        <div class="review__short">Хороший аппарат</div>
+                        <div class="review__user">Антилопа Гну</div>
+                      </div>
+                      <div class="review__body">
+                        <p class="review__text">
+                          Отличный усилитель, мне нравится. Доставка тоже не подвела, курьер привез быстро, был вежлив.
+                        </p>
+                        <div class="review__rating">
+                          <form class="rating">
+                            <input type="radio" name="rating" value="1" checked>
+                            <input type="radio" name="rating" value="2" checked>
+                            <input type="radio" name="rating" value="3" checked>
+                            <input type="radio" name="rating" value="4">
+                            <input type="radio" name="rating" value="5">
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review">
+                      <div class="review__header">
+                        <div class="review__short">Все супер</div>
+                        <div class="review__user">Шура Балаганов</div>
+                      </div>
+                      <div class="review__body">
+                        <p class="review__text">
+                          Отличный усилитель, мне нравится. Доставка тоже не подвела, курьер привез быстро, был вежлив.
+                        </p>
+                        <div class="review__rating">
+                          <form class="rating">
+                            <input type="radio" name="rating" value="1" checked>
+                            <input type="radio" name="rating" value="2" checked>
+                            <input type="radio" name="rating" value="3" checked>
+                            <input type="radio" name="rating" value="4">
+                            <input type="radio" name="rating" value="5">
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /.tabs__content-item-->
+                <div class="tabs__content-item" id="custom">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolor vitae pariatur ipsam fuga accusamus illum voluptates! A, nam? Dicta aliquid eum nobis sit accusamus eligendi omnis culpa ratione tenetur earum, at numquam excepturi vitae fugiat, neque quidem sequi id nihil. Debitis consequuntur voluptate ut dolore suscipit quas voluptatem placeat.
+                </div><!-- /.tabs__content-item-->
+              </div><!-- /.tabs__container-->
+            </div><!-- /.products-tabs -->
+          </div><!-- /.product-page__info -->
+        </div><!-- /.product-page__inner -->
+        <div class="product-page__products">
+          <h3 class="product-page__products-title">С этим товаром покупают</h3>
+          <div class="product-page__products-slider">
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Запчасти к бензо-технике
+              </div>
+              <div class="product-page__products-name">
+                Катушка с леской
+              </div>
+              <div class="product-page__products-price">
+                300 руб.
+              </div>
+            </a>
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Аксессуары
+              </div>
+              <div class="product-page__products-name">
+                Щиток защитный Brembo
+              </div>
+              <div class="product-page__products-price">
+                2 100 руб.
+              </div>
+            </a>
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Аксессураы
+              </div>
+              <div class="product-page__products-name">
+                Ремень двух-плечный для триммера Вензо
+              </div>
+              <div class="product-page__products-price">
+                1 670 руб.
+              </div>
+            </a>
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Запчасти к бензо-технике
+              </div>
+              <div class="product-page__products-name">
+                Катушка с леской
+              </div>
+              <div class="product-page__products-price">
+                300 руб.
+              </div>
+            </a>
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Запчасти к бензо-технике
+              </div>
+              <div class="product-page__products-name">
+                Катушка с леской
+              </div>
+              <div class="product-page__products-price">
+                300 руб.
+              </div>
+            </a>
+            <a class="product-page__products-item" href="#">
+              <picture>
+                <source class="product-page__products-img img-responsive" srcset="assets/img/content/product-middle.webp" type="image/webp">
+                <img class="product-page__products-img img-responsive" src="assets/img/content/product-middle.jpg" alt="">
+              </picture>
+              <div class="product-page__products-category">
+                Запчасти к бензо-технике
+              </div>
+              <div class="product-page__products-name">
+                Катушка с леской
+              </div>
+              <div class="product-page__products-price">
+                300 руб.
+              </div>
+            </a>
+          </div>
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.product-page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="footer__top-copyrights">
+              © Copyright 2020 MageAssist -<br>
+              Premium Fast & Simple theme Magento
+            </div>
+            <div class="footer__form-wrapper">
+              <h4 class="footer__form-title">
+                Подпишитесь на нашу рассылку
+              </h4>
+              <form class="footer__form">
+                <input class="footer__form-input" type="email" name="email" placeholder="Email">
+                <button class="footer__form-btn" type="submit">Подписаться</button>
+              </form>
+              <p class="footer__form-text">
+                Никакого спама, только качественный контент. Ваши данные мы не передаем никаким третьим лицам.
+              </p>
+            </div>
+            <a class="footer__logo" href="index.html">
+              <img src="assets/img/logo.svg" alt="">
+            </a>
+          </div>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <h4 class="footer__menu-title">
+                Информация
+              </h4>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Условия оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Условия доставки</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Помощь покупателям</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Про гарантию</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Возврат и обмен</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Магазины</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <h4 class="footer__menu-title">
+                Помощь
+              </h4>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Обратная связь</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">О сервисе</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Новости компании</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Оформление заказа</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <h4 class="footer__menu-title">
+                Компания
+              </h4>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Контакты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Реквизиты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">О компании</a>
+            </li>
+          </ul>
+          <div class="footer__footer">
+            <div class="footer__footer-content">
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                    <img src="assets/img/facebook.svg" alt="">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                    <img src="assets/img/instagram.svg" alt="">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                    <img src="assets/img/twitter.svg" alt="">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                    <img src="assets/img/youtube.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__footer-menu">
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a href="#">О нас</a></li>
+                  <li class="footer-menu__item"><a href="#">Контактная информация</a></li>
+                  <li class="footer-menu__item"><a href="#">Возврат и гарантия</a></li>
+                  <li class="footer-menu__item"><a href="#">Оплата и доставка</a></li>
+                </ul>
+              </div>
+              <div class="footer__copyrights">
+                © Copyright 2020 Mageassist
+              </div>
+            </div>
+          </div><!-- /.footer__footer -->
+        </div><!-- /.footer__inner -->
+      </div><!-- /.container -->
+    </footer>
+
+    <!-- Modals -->
+    <div class="cart-modal">
+      <div class="cart-modal__dialog">
+        <button class="cart-modal__close">
+          <img src="assets/img/close-orange.svg" alt="">
+        </button>
+        <div class="cart-modal__title">
+          Корзина <span>(<span>24</span> товара)</span>
+        </div>
+        <ul class="cart-modal__list">
+          <li class="cart-modal__item">
+            <a href="#" class="cart-modal__link">
+              <img class="cart-modal__img img-responsive" src="assets/img/content/product-1.png" alt="">
+            </a>
+              <div class="cart-modal__product-info">
+                <h5 class="cart-modal__product-title">
+                  Услитель звука 4 канала Alpine BBX-F1200
+                </h5>
+                <div class="cart-modal__hover-text">
+                  <div class="cart-modal__product-color">Цвет: Черный</div>
+                  <div class="cart-modal__product-size">Размер: XS</div>
+                </div>
+                <div class="cart-modal__product-price">
+                  6900 руб.
+                </div>
+              </div>
+            <div class="cart-modal__counter">
+              <button class="cart-modal__counter-decrease">-</button>
+              <span class="cart-modal__counter-num">1</span>
+              <button class="cart-modal__counter-increase">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <a href="#" class="cart-modal__link">
+              <img class="cart-modal__img img-responsive" src="assets/img/content/product-1.png" alt="">
+            </a>
+              <div class="cart-modal__product-info">
+                <h5 class="cart-modal__product-title">
+                  Услитель звука 4 канала Alpine BBX-F1200
+                </h5>
+                <div class="cart-modal__hover-text">
+                  <div class="cart-modal__product-color">Цвет: Черный</div>
+                  <div class="cart-modal__product-size">Размер: XS</div>
+                </div>
+                <div class="cart-modal__product-price">
+                  <div class="cart-modal__product-price--old">
+                    6000 руб.
+                  </div>
+                  <div class="cart-modal__product-price--new">
+                    6900 руб.
+                  </div>
+                </div>
+              </div>
+            <div class="cart-modal__counter">
+              <button class="cart-modal__counter-decrease">-</button>
+              <span class="cart-modal__counter-num">1</span>
+              <button class="cart-modal__counter-increase">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <a href="#" class="cart-modal__link">
+              <img class="cart-modal__img img-responsive" src="assets/img/content/product-1.png" alt="">
+            </a>
+              <div class="cart-modal__product-info">
+                <h5 class="cart-modal__product-title">
+                  Услитель звука 4 канала Alpine BBX-F1200
+                </h5>
+                <div class="cart-modal__hover-text">
+                  <div class="cart-modal__product-color">Цвет: Черный</div>
+                  <div class="cart-modal__product-size">Размер: XS</div>
+                </div>
+                <div class="cart-modal__product-price">
+                  <div class="cart-modal__product-price--old">
+                    6000 руб.
+                  </div>
+                  <div class="cart-modal__product-price--new">
+                    6900 руб.
+                  </div>
+                </div>
+              </div>
+            <div class="cart-modal__counter">
+              <button class="cart-modal__counter-decrease">-</button>
+              <span class="cart-modal__counter-num">1</span>
+              <button class="cart-modal__counter-increase">+</button>
+            </div>
+          </li>
+        </ul><!-- /.cart-modal__list -->
+        <div class="cart-modal__total">
+          Итого: <span class="cart-modal__total-price">209000 руб.</span>
+        </div>
+        <a href="order.html" class="cart-modal__btn">
+          Оформить заказ
+        </a>
+      </div><!-- /.cart-modal__dialog -->
+    </div><!-- /.cart-modal -->
+
+    <div class="info-modal">
+      <div class="info-modal__dialog">
+        <button class="info-modal__close-btn"><img src="assets/img/close-icon-grey.svg" alt=""></button>
+        <div class="info-modal__col">
+          <h4 class="info-modal__title">
+            Доставка и возврат
+          </h4>
+          <ul class="info-modal__list">
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/trunk-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Бесплатная доставка от 5 000 руб.
+              </div>
+            </li>
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/alarm-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Время доставки
+                <div class="info-modal__info-box">
+                  Москва: <span>0 - 3 рабочих дней</span>
+                  Московская обл.: <span>2 - 7 рабочих дней</span>
+                  Остальные: <span>5 - 14 рабочих дней</span>
+                </div>
+                <a class="info-modal__extra-link" href="#">Подробнее о возврате</a>
+              </div>
+            </li>
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/compare-orange-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Возврат в течении 30 дней
+                <a class="info-modal__extra-link" href="#">Подробнее о возврате</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="info-modal__col">
+          <h4 class="info-modal__title">
+            Оплата
+          </h4>
+          <ul class="info-modal__list">
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/credit-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Банковской картой (Visa, Mastercard, МИР)
+              </div>
+            </li>
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/wallet-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Наличными при получении
+              </div>
+            </li>
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/laptop-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Электронные кошельки (Яндекс Деньги, WebMoney и др.)
+              </div>
+            </li>
+            <li class="info-modal__item">
+              <img class="info-modal__icon" src="assets/img/coin-icon.svg" alt="">
+              <div class="info-modal__text-content">
+                Кредит и рассрочка 
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
